@@ -1,0 +1,53 @@
+/* ---------- S02 · la lista que se demuestra sola ----------
+   Cada defecto va escrito Y dibujado debajo. Decir "botones pequenos"
+   en tipografia grande y prolija es justamente no mostrarlo. */
+.dem{border-top:1px solid var(--line);padding:30px 0 26px}
+.dem:last-child{border-bottom:1px solid var(--line)}
+.dem h3{font-family:var(--f-display);font-weight:700;font-size:64px;line-height:1.08;
+        letter-spacing:-.022em;margin-bottom:20px}
+.dem .mini{display:inline-block;background:var(--ink);color:#fff;font-family:var(--f-body);
+           font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+           padding:4px 9px;border-radius:2px}
+.dem .denso{font-family:Georgia,serif;font-size:12.5px;line-height:1.6;color:#9AA0A6;
+            column-count:2;column-gap:26px;text-align:justify}
+.dem .menu{font-family:Georgia,serif;font-size:15px;color:#9AA0A6;white-space:nowrap;
+           overflow:hidden}
+
+/* ---------- S03 · tres muestras, no una pagina entera ----------
+   Un defecto por ficha, a tamano de muestra: se mira como un catalogo
+   de peritaje y no como otra captura de navegador. */
+.esp{display:flex;gap:22px}
+.esp > div{flex:1;min-width:0}
+.esp .caja{background:#fff;border-radius:3px;height:300px;overflow:hidden;position:relative}
+.esp .pie{font-family:var(--f-body);font-weight:700;font-size:19px;letter-spacing:.12em;
+          text-transform:uppercase;color:var(--orange);margin-top:20px}
+/* 1 · la foto de relleno */
+.esp .relleno{position:absolute;inset:26px;background:#E7E6E2;display:flex;
+              align-items:center;justify-content:center;font-family:Georgia,serif;
+              font-size:15px;color:#A8A8A2}
+/* 2 · la tipografia de 2005 */
+.esp .vieja{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+            font-family:Georgia,'Times New Roman',serif;font-weight:700;font-style:italic;
+            font-size:36px;color:#2F4E8F;text-shadow:2px 2px 0 #B9C4D8;text-align:center;
+            padding:0 16px;line-height:1.24}
+/* 3 · el aire mal repartido */
+.esp .apretado{position:absolute;left:18px;top:16px;width:44%}
+.esp .apretado i{display:block;height:7px;background:#D3D2CD;border-radius:2px;
+                 margin-bottom:6px}
+.esp .apretado i.c{width:62%}
+.esp .apretado b{display:block;font-family:Georgia,serif;font-size:13px;color:#4A4A46;
+                 margin-bottom:10px}
+
+/* ---------- S06 · una sola ventana partida al medio ----------
+   El antes/despues en dos paneles chicos ya esta en el Fijado 2.
+   Aca es la MISMA pagina cortada por una linea: se lee de un golpe. */
+.split{position:relative;height:100%;overflow:hidden;background:#fff}
+.split .mitad{position:absolute;top:0;bottom:0;width:50%;overflow:hidden}
+/* 44/56: la mitad derecha tiene que entrar el titular de la web nueva,
+   si no el "despues" es solo una foto oscura y no se entiende nada */
+.split .izq{left:0;width:44%}
+.split .der{right:0;width:56%}
+.split .corte{position:absolute;left:44%;top:0;bottom:0;width:3px;background:var(--orange);
+              transform:translateX(-50%);z-index:6}
+.rotulo{font-family:var(--f-body);font-weight:700;font-size:19px;letter-spacing:.14em;
+        text-transform:uppercase;position:absolute;z-index:5}
