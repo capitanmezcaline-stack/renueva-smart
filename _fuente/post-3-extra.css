@@ -1,0 +1,105 @@
+/* ============================================================
+   COMPONENTES DEL FIJADO 3
+   Hereda .old y .new del Fijado 2 y agrega el aparato de analisis
+   ============================================================ */
+
+/* ---------- WEB MODERNA, version completa ---------- */
+.new{width:1000px;font-family:'Plus Jakarta Sans',sans-serif;color:#14171A;background:#fff;
+     transform-origin:top left}
+.new .nh{display:flex;justify-content:space-between;align-items:center;
+         padding:24px 34px;border-bottom:1px solid #ECECE8}
+.new .nlog{font-family:'Fraunces',serif;font-weight:700;font-size:21px;letter-spacing:-.01em}
+.new .nnav{display:flex;gap:24px;align-items:center;font-size:12px;font-weight:600;
+           letter-spacing:.08em;text-transform:uppercase;color:#7C8288}
+.new .nnav .nb{background:#14171A;color:#fff;padding:9px 16px;border-radius:3px}
+.new .nhero{display:flex;gap:36px;padding:44px 34px 38px}
+.new .ncol{flex:1}
+.new .neyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+               color:#FF6A00;margin-bottom:14px}
+.new .nttl{font-family:'Fraunces',serif;font-weight:700;font-size:44px;line-height:1.08;
+           letter-spacing:-.02em;margin-bottom:16px}
+.new .ntxt{font-size:14px;line-height:1.65;color:#5A6068;margin-bottom:24px}
+.new .nbtn{display:inline-block;background:#14171A;color:#fff;font-size:12px;font-weight:700;
+           letter-spacing:.1em;text-transform:uppercase;padding:13px 24px;border-radius:3px}
+.new .nimg{width:290px;flex:0 0 290px;height:236px;border-radius:5px;overflow:hidden;background:#E9E9E5}
+.new .nimg img{width:100%;height:100%;object-fit:cover;display:block}
+.new .nstrip{display:flex;gap:1px;background:#ECECE8;border-top:1px solid #ECECE8}
+.new .nstrip div{flex:1;background:#fff;padding:22px 24px}
+.new .nstrip b{font-family:'Fraunces',serif;font-size:17px;display:block;margin-bottom:6px}
+.new .nstrip span{font-size:11px;color:#8A9096;line-height:1.5}
+.new .ncita{background:#F5F3EE;padding:34px;border-top:1px solid #ECECE8}
+.new .ncita p{font-family:'Fraunces',serif;font-style:italic;font-size:22px;line-height:1.4;
+              color:#14171A;margin-bottom:12px}
+.new .ncita span{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+                 color:#8A9096}
+.new .nfoot{display:flex;justify-content:space-between;padding:24px 34px;background:#14171A;
+            color:#8A9096;font-size:11px;letter-spacing:.06em}
+
+/* movil: mismo lenguaje, una columna */
+.new.movil{width:390px}
+.new.movil .nhero{flex-direction:column;gap:22px;padding:32px 26px 28px}
+.new.movil .nimg{width:100%;flex:auto;height:168px}
+.new.movil .nttl{font-size:36px}
+.new.movil .nstrip{flex-direction:column}
+.new.movil .nnav .nb{padding:8px 13px}
+
+/* ---------- APARATO DE ANALISIS ---------- */
+/* marcador numerado que se apoya sobre una captura */
+.mk{position:absolute;z-index:8;display:flex;align-items:center;gap:0}
+.mk .bola{width:52px;height:52px;border-radius:50%;background:var(--orange);color:#fff;
+          font-family:var(--f-body);font-weight:700;font-size:21px;display:flex;
+          align-items:center;justify-content:center;flex:0 0 52px}
+.mk .guia{height:2px;background:var(--orange);width:54px}
+.mk .rot{font-family:var(--f-body);font-weight:700;font-size:16px;letter-spacing:.14em;
+         text-transform:uppercase;background:var(--orange);color:#fff;padding:9px 14px;
+         white-space:nowrap}
+.mk.izq{flex-direction:row-reverse}
+.mk.izq .guia{transform:scaleX(-1)}
+
+/* etiqueta liviana, solo contorno, para no tapar la captura */
+.et-fina{position:absolute;z-index:8;font-family:var(--f-body);font-weight:700;font-size:15px;
+         letter-spacing:.16em;text-transform:uppercase;color:var(--orange);
+         border:2px solid var(--orange);padding:7px 12px;background:rgba(255,255,255,.92);
+         white-space:nowrap}
+.dark .et-fina{background:rgba(11,12,14,.82)}
+
+/* recuadro punteado que señala una zona de la captura */
+.zona{position:absolute;z-index:7;border:2px dashed var(--orange);border-radius:3px}
+
+/* ---------- LISTA DE HALLAZGOS NUMERADOS ---------- */
+.pt4{display:flex;gap:30px;padding:26px 0;border-top:1px solid var(--line)}
+.pt4 .n{font-family:var(--f-body);font-weight:700;font-size:19px;letter-spacing:.16em;
+        color:var(--orange);flex:0 0 52px;padding-top:12px}
+.pt4 h3{font-family:var(--f-display);font-weight:700;font-size:46px;letter-spacing:-.02em;
+        line-height:1.1;margin-bottom:8px}
+.pt4 p{font-family:var(--f-body);font-size:28px;line-height:1.4;color:var(--body)}
+.orange .pt4{border-top-color:rgba(255,255,255,.34)}
+.orange .pt4 .n{color:var(--ink)}
+.orange .pt4 h3{color:#fff}
+.orange .pt4 p{color:rgba(255,255,255,.92)}
+
+/* ---------- TRANSICION ANTES -> MARCA -> DESPUES ---------- */
+.tres{display:flex;align-items:center;gap:30px}
+.tres .caja{flex:1;min-width:0}
+.tres .flecha{font-family:var(--f-body);font-weight:700;font-size:34px;color:var(--orange);
+              flex:0 0 auto}
+.tres .marca{flex:0 0 auto;font-family:var(--f-display);font-weight:700;font-size:28px;
+             letter-spacing:-.01em;color:var(--orange);text-align:center;line-height:1.2}
+
+/* ---------- PAR ANTES / DESPUES ---------- */
+.par{display:flex;gap:26px}
+.par > div{flex:1;min-width:0}
+.par .cap{font-family:var(--f-body);font-weight:700;font-size:17px;letter-spacing:.2em;
+          text-transform:uppercase;margin-bottom:14px;display:block;color:var(--grey)}
+.par .cap.ok{color:var(--orange)}
+.par .marco{border-radius:5px;overflow:hidden;background:#fff}
+.dark .par .cap{color:#767C83}
+
+/* leyenda de honestidad: esto es un rediseño conceptual */
+.leyenda{font-family:var(--f-body);font-weight:400;font-size:19px;letter-spacing:.04em;
+         color:var(--grey)}
+.dark .leyenda{color:#63696F}
+
+/* etiqueta chica para el trio antes -> marca -> despues */
+.cap-min{font-family:var(--f-body);font-weight:700;font-size:15px;letter-spacing:.2em;
+         text-transform:uppercase;color:var(--grey);display:block;margin-bottom:10px}

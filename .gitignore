@@ -1,0 +1,51 @@
+# Todo lo de acá se regenera corriendo los scripts. No se versiona.
+
+# --- piezas exportadas ---
+FIJADO-*/RS-F*.png
+FIJADO-*/renueva-fijado-*.html
+FIJADO-*/_render/
+DESTACADOS/*/*.png
+PLAN-CONTENIDO/portadas/
+PLAN-CONTENIDO/FEED.jpg
+
+# --- librerías de fotos (58 MB): se rebajan con _fuente/fetch_pexels.py ---
+_fuente/fotos/
+_fuente/fotos_hi/
+
+# --- capturas del caso a tamaño original: se rehacen con capturar_caso.py ---
+# (las versiones .jpg optimizadas sí se versionan: son las que usan las piezas)
+_fuente/assets/caso-*.png
+
+# --- HTML intermedio que arman los scripts ---
+_fuente/post-2.src.html
+_fuente/post-3.src.html
+_fuente/historias-*.html
+_fuente/grilla-feed.html
+_fuente/destacados.html
+
+# --- pruebas, respaldos y scratch ---
+_direcciones/
+_fuente/_bak-*
+_fuente/_sitio.*
+_fuente/_medir.html
+_fuente/_css-base.txt
+_fuente/portadas.html
+_fuente/portadas2.html
+_fuente/fotos-s04.html
+_fuente/direcciones.html
+
+# --- kit de fuentes de otra marca, no corresponde acá ---
+_fuente/fonts-a.css
+_fuente/fonts-b.css
+
+# --- sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+
+# --- material que ya no usa ninguna pieza ---
+_fuente/assets/resena-*.mp4
+_fuente/assets/etiqueta-*.png
+_fuente/assets/_caso.jpg
+_fuente/assets/_logo-sitio-520.png

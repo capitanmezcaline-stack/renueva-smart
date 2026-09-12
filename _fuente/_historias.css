@@ -1,0 +1,45 @@
+/* ============================================================
+   HISTORIAS DE DESTACADOS · 1080x1920
+   Instagram tapa ~230px arriba (barra de progreso, avatar, nombre)
+   y ~250px abajo (caja de mensaje). Todo vive entre y=260 y y=1660.
+   ============================================================ */
+.h{width:1080px;height:1920px;position:relative;overflow:hidden;text-align:left;
+   background:var(--paper);color:var(--ink)}
+.h.tinta{background:var(--ink);color:var(--paper)}
+.h.naranja{background:var(--orange);color:#fff}
+
+.h .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.h .velo{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(11,12,14,.80) 0%,rgba(11,12,14,.34) 26%,
+             rgba(11,12,14,.62) 58%,rgba(11,12,14,.95) 86%,#0B0C0E 100%)}
+
+.h .marca{position:absolute;top:284px;left:96px;z-index:9}
+.h .marca img{width:168px;display:block;margin-left:-2px}
+.h .rot{position:absolute;top:300px;right:96px;z-index:9;font-family:var(--f-body);
+        font-weight:700;font-size:20px;letter-spacing:.2em;text-transform:uppercase;
+        color:var(--grey)}
+.h.tinta .rot{color:#767C83}
+.h.naranja .rot{color:rgba(255,255,255,.9)}
+
+.h .cuerpo{position:absolute;left:96px;right:96px;z-index:6}
+.h h2{font-family:var(--f-display);font-weight:700;font-size:104px;line-height:1.08;
+      letter-spacing:-.02em;font-optical-sizing:auto}
+.h .txt{font-family:var(--f-body);font-weight:400;font-size:44px;line-height:1.45;
+        color:var(--body);letter-spacing:-.008em}
+.h.tinta .txt{color:#A7ACB2}
+.h.naranja .txt{color:rgba(255,255,255,.94)}
+.h .eyebrow{font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.2em;
+            text-transform:uppercase;color:var(--orange)}
+.h.naranja .eyebrow{color:var(--ink)}
+
+/* lista de pasos numerados */
+.h .paso{display:flex;gap:30px;padding:30px 0;border-top:1px solid rgba(255,255,255,.18)}
+.h.papel .paso{border-top-color:var(--line)}
+.h .paso .n{font-family:var(--f-body);font-weight:700;font-size:21px;letter-spacing:.16em;
+            color:var(--orange);flex:0 0 56px;padding-top:14px}
+.h .paso p{font-family:var(--f-display);font-weight:600;font-size:52px;line-height:1.16;
+           letter-spacing:-.018em}
+
+/* preguntas sueltas */
+.h .preg{font-family:var(--f-display);font-weight:600;font-size:64px;line-height:1.5;
+         letter-spacing:-.02em}

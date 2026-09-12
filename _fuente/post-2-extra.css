@@ -1,0 +1,82 @@
+/* ============================================================
+   COMPONENTES NUEVOS DEL FIJADO 2
+   ============================================================ */
+
+/* ---------- WEB MODERNA · la contracara de .old ---------- */
+.new{width:1000px;font-family:'Plus Jakarta Sans',sans-serif;color:#14171A;background:#fff;
+     transform-origin:top left}
+.new .nh{display:flex;justify-content:space-between;align-items:center;
+         padding:26px 34px;border-bottom:1px solid #ECECE8}
+.new .nlog{font-family:'Fraunces',serif;font-weight:700;font-size:21px;letter-spacing:-.01em}
+.new .nnav{display:flex;gap:26px;font-size:13px;font-weight:600;letter-spacing:.08em;
+           text-transform:uppercase;color:#7C8288}
+.new .nhero{display:flex;gap:38px;padding:46px 34px 40px}
+.new .ncol{flex:1}
+.new .neyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+               color:#FF6A00;margin-bottom:16px}
+.new .nttl{font-family:'Fraunces',serif;font-weight:700;font-size:46px;line-height:1.1;
+           letter-spacing:-.02em;margin-bottom:18px}
+.new .ntxt{font-size:15px;line-height:1.65;color:#5A6068;margin-bottom:26px}
+.new .nbtn{display:inline-block;background:#14171A;color:#fff;font-size:13px;font-weight:700;
+           letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;border-radius:4px}
+.new .nimg{width:300px;flex:0 0 300px;border-radius:6px;overflow:hidden;background:#E9E9E5}
+.new .nimg img{width:100%;height:100%;object-fit:cover;display:block}
+.new .nstrip{display:flex;gap:1px;background:#ECECE8;border-top:1px solid #ECECE8}
+.new .nstrip div{flex:1;background:#fff;padding:22px 24px}
+.new .nstrip b{font-family:'Fraunces',serif;font-size:17px;display:block;margin-bottom:6px}
+.new .nstrip span{font-size:12px;color:#8A9096;line-height:1.5}
+
+/* version movil: mismo lenguaje, una sola columna */
+.new.movil{width:390px}
+.new.movil .nhero{flex-direction:column;gap:24px;padding:34px 28px 30px}
+.new.movil .nimg{width:100%;flex:auto;height:180px}
+.new.movil .nttl{font-size:38px}
+.new.movil .nstrip{flex-direction:column}
+
+/* ---------- DIAGRAMA DE DOS PISTAS ---------- */
+.pista{display:flex;align-items:center;gap:26px;margin-bottom:40px}
+.pista .et{font-family:var(--f-body);font-weight:700;font-size:18px;letter-spacing:.2em;
+           text-transform:uppercase;color:var(--grey);flex:0 0 186px}
+.pista .via{position:relative;flex:1;height:22px}
+.pista .via .barra{position:absolute;top:9px;left:0;height:4px;background:var(--ink)}
+.pista .via .punteado{position:absolute;top:9px;height:0;border-top:4px dashed #C4C7C2}
+.pista .via .pt{position:absolute;top:0;width:22px;height:22px;border-radius:50%}
+.pista .via .lleno{background:var(--orange)}
+.pista .via .hueco{background:var(--paper);border:4px solid #B9BCB7}
+.hitos{display:flex;justify-content:space-between;margin:0 0 14px 212px;
+       font-family:var(--f-body);font-weight:700;font-size:16px;letter-spacing:.2em;
+       text-transform:uppercase;color:#B0B4B0}
+
+/* ---------- LISTA DE HALLAZGOS ---------- */
+.hall{display:flex;align-items:baseline;gap:28px;padding:22px 0;
+      border-top:1px solid var(--line)}
+.hall .x{font-family:var(--f-body);font-weight:700;font-size:34px;color:var(--orange);
+         flex:0 0 34px;line-height:1}
+.hall p{font-family:var(--f-display);font-weight:600;font-size:44px;line-height:1.15;
+        letter-spacing:-.02em;color:var(--ink)}
+
+/* ---------- FLUJO DE ESTRUCTURA ---------- */
+.flujo{position:relative;padding-left:46px}
+.flujo::before{content:"";position:absolute;left:7px;top:14px;bottom:14px;width:2px;
+               background:var(--line)}
+.flujo .paso{position:relative;padding:19px 0}
+.flujo .paso::before{content:"";position:absolute;left:-46px;top:30px;width:16px;height:16px;
+                     border-radius:50%;background:var(--paper);border:2px solid var(--orange)}
+.flujo .paso:last-child::before{background:var(--orange)}
+.flujo .paso span{font-family:var(--f-display);font-weight:600;font-size:52px;
+                  letter-spacing:-.02em;line-height:1.1}
+
+/* ---------- PILDORAS DE ACCION ---------- */
+.pastillas{display:flex;flex-wrap:wrap;gap:18px}
+.pastillas span{font-family:var(--f-display);font-weight:600;font-size:44px;
+                letter-spacing:-.018em;line-height:1;padding:22px 38px;border-radius:999px;
+                border:2px solid rgba(255,255,255,.32);color:var(--paper)}
+.pastillas span.on{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* ---------- PAR ANTES / DESPUES ---------- */
+.par{display:flex;gap:28px}
+.par > div{flex:1;min-width:0}
+.par .cap{font-family:var(--f-body);font-weight:700;font-size:17px;letter-spacing:.2em;
+          text-transform:uppercase;margin-bottom:14px;display:block;color:var(--grey)}
+.par .cap.ok{color:var(--orange)}
+.par .marco{border-radius:5px;overflow:hidden;background:#fff}

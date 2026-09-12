@@ -1,0 +1,376 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Renueva Smart — Fijado 1</title>
+<link rel="stylesheet" href="renueva-fonts.css">
+<style>
+/* ============================================================
+   RENUEVA SMART — FIJADO 1 · "¿Tu web necesita una renovación?"
+   Tipografia del sitio · escala grande
+   ============================================================ */
+:root{
+  --orange:#FF6A00; --ink:#0B0C0E; --paper:#F5F3EE; --white:#FFFFFF;
+  --grey:#8D9299; --body:#4F555C; --line:#DFE0DC;
+  --f-display:'Fraunces',Georgia,'Iowan Old Style',serif;
+  --f-body:'Plus Jakarta Sans','Segoe UI',-apple-system,Roboto,Arial,sans-serif;
+  --f-ui:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --safe:112px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#232326;font-family:var(--f-body);-webkit-font-smoothing:antialiased;
+     text-rendering:optimizeLegibility;display:flex;flex-wrap:wrap;gap:20px;padding:20px}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;text-align:left;
+       background:var(--paper);color:var(--ink)}
+.slide.white{background:var(--white)}
+.slide.dark{background:var(--ink);color:var(--paper)}
+.slide.orange{background:var(--orange);color:#fff}
+.orange .lbl{color:rgba(255,255,255,.88)}
+.orange .idx{color:var(--ink)}
+.orange h2,.orange h3{color:#fff}
+.orange .line{color:rgba(255,255,255,.94)}
+.orange .rule{background:rgba(255,255,255,.34)}
+.orange .swipe{color:rgba(255,255,255,.82)}
+.orange .tag{background:var(--ink);color:#fff}
+
+/* ---------- foto ---------- */
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.bn{filter:grayscale(1) brightness(.56) contrast(1.16)}
+.veil-cover{position:absolute;inset:0;z-index:1;
+      background:linear-gradient(180deg,rgba(11,12,14,.58) 0%,rgba(11,12,14,.16) 26%,
+                 rgba(11,12,14,.58) 56%,rgba(11,12,14,.94) 86%,#0B0C0E 100%)}
+.veil{position:absolute;inset:0;z-index:1;
+      background:linear-gradient(180deg,rgba(11,12,14,.66) 0%,rgba(11,12,14,.22) 26%,
+                 rgba(11,12,14,.52) 54%,rgba(11,12,14,.93) 84%,#0B0C0E 100%)}
+.veil-strong{position:absolute;inset:0;z-index:1;
+      background:linear-gradient(180deg,rgba(11,12,14,.90) 0%,rgba(11,12,14,.72) 38%,
+                 rgba(11,12,14,.86) 72%,rgba(11,12,14,.96) 100%)}
+.veil-light{position:absolute;inset:0;z-index:1;
+      background:linear-gradient(180deg,rgba(245,243,238,.58) 0%,rgba(245,243,238,.20) 30%,
+                 rgba(245,243,238,.86) 56%,rgba(245,243,238,.98) 78%,var(--paper) 100%)}
+
+/* ---------- chrome ---------- */
+.top{position:absolute;top:152px;left:var(--safe);right:var(--safe);z-index:9;
+     height:56px;display:flex;justify-content:space-between;align-items:center}
+.lbl{font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.2em;
+     text-transform:uppercase;color:var(--grey)}
+.dark .lbl{color:#767C83}
+.sobre-claro .lbl{color:#5A6068}
+.on-dark .lbl{color:rgba(255,255,255,.7)}
+.top img{width:168px;display:block;margin-left:-2px}
+.swipe{position:absolute;bottom:68px;right:var(--safe);z-index:9;display:flex;
+       height:56px;align-items:center;justify-content:flex-end;gap:18px;color:#6E747B}
+.swipe span{font-family:var(--f-body);font-weight:700;font-size:19px;letter-spacing:.2em;
+            text-transform:uppercase}
+.swipe svg{width:62px;height:14px;display:block;flex:0 0 62px}
+.dark .swipe,.on-dark .swipe{color:rgba(255,255,255,.58)}
+.foot{position:absolute;bottom:54px;left:var(--safe);z-index:9}
+.foot img{width:168px;display:block;margin-left:-2px}
+
+/* ---------- tipografia ---------- */
+h1{font-family:var(--f-display);font-weight:700;font-size:182px;line-height:1.0;
+   letter-spacing:-.024em;font-optical-sizing:auto}
+h2{font-family:var(--f-display);font-weight:700;font-size:100px;line-height:1.1;
+   letter-spacing:-.018em;font-optical-sizing:auto}
+.it{font-style:italic;font-weight:700}
+.kicker{font-family:var(--f-body);font-weight:400;font-size:46px;line-height:1.3;
+        color:var(--grey);letter-spacing:-.01em}
+.line{font-family:var(--f-body);font-weight:400;font-size:46px;line-height:1.4;
+      color:var(--body);max-width:856px;letter-spacing:-.008em}
+.dark .line,.on-dark .line{color:#A7ACB2}
+.idx{font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.2em;
+     color:var(--orange);text-transform:uppercase}
+.rule{height:1px;background:var(--line)}
+.dark .rule{background:#22262B}
+
+/* ---------- anotacion naranja · una sola por pieza ---------- */
+.tag{position:absolute;font-family:var(--f-body);font-weight:700;font-size:19px;
+     letter-spacing:.12em;background:var(--orange);color:#fff;padding:10px 17px;
+     text-transform:uppercase;white-space:nowrap;z-index:7}
+
+/* ---------- dispositivos ---------- */
+.frame{position:absolute;background:#fff;border-radius:6px;overflow:hidden;z-index:2}
+.frame .bar{height:46px;background:#E7E7E3;display:flex;align-items:center;
+            padding:0 18px;gap:8px;position:relative;z-index:3;border-bottom:1px solid #D8D8D3}
+.frame .bar i{width:9px;height:9px;border-radius:50%;background:#BFBFBA;display:block}
+.frame .bar span{font-family:var(--f-ui);font-size:13px;color:#9A9A95;margin-left:16px;
+                 letter-spacing:.06em}
+.lift{box-shadow:0 50px 110px rgba(0,0,0,.62), 0 8px 24px rgba(0,0,0,.4)}
+.lift-soft{box-shadow:0 28px 64px rgba(11,12,14,.13)}
+.phone{position:absolute;border:10px solid #16181B;border-radius:44px;background:#fff;
+       overflow:hidden;z-index:3}
+.phone .notch{height:24px;background:#16181B;width:124px;margin:0 auto;
+              border-radius:0 0 13px 13px;position:relative;z-index:4}
+
+/* ---------- WEB VIEJA (mock generico, nunca un cliente real) ---------- */
+.old{width:1000px;font-family:Georgia,'Times New Roman',serif;color:#2b2b2b;background:#fff;
+     transform-origin:top left}
+.old .oh{display:flex;justify-content:space-between;align-items:center;
+         padding:18px 26px;border-bottom:3px double #b9b9b9}
+.old .olog{font-size:26px;letter-spacing:.06em;color:#1d3a6b}
+.old .onav{font-size:13px;color:#0645AD;letter-spacing:.03em}
+.old .oban{height:96px;background:linear-gradient(#5B86C6,#2C4F84);display:flex;
+           align-items:center;justify-content:center;color:#fff;font-size:27px;
+           letter-spacing:.09em;text-shadow:1px 1px 2px rgba(0,0,0,.4)}
+.old .obody{display:flex;gap:22px;padding:22px 26px}
+.old .ocol{flex:1}
+.old .ottl{font-size:27px;color:#1d3a6b;margin-bottom:10px}
+.old p{font-size:14px;line-height:1.9;margin-bottom:11px;text-align:justify}
+.old .oimg{width:230px;height:150px;background:#d7d7d7;border:1px solid #999;
+           display:flex;align-items:center;justify-content:center;color:#8a8a8a;
+           font-size:12px;flex:0 0 230px}
+
+/* ---------- indice de servicios ---------- */
+.item{display:flex;align-items:baseline;gap:34px;padding:20px 0;border-top:1px solid var(--line)}
+.item .n{font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.18em;
+         color:var(--orange);flex:0 0 52px}
+.item h3{font-family:var(--f-display);font-weight:700;font-size:72px;letter-spacing:-.018em;
+         line-height:1.1}
+
+/* ---------- preguntas ---------- */
+.q{font-family:var(--f-display);font-weight:600;font-size:76px;line-height:1.38;
+   letter-spacing:-.018em;color:var(--ink)}
+</style></head><body>
+
+<!-- ============ 01 · HOOK ============ -->
+<div class="slide dark on-dark" id="s01">
+  <img class="bg bn" src="fotos_hi/px-8092431.jpg" style="object-position:50% 46%">
+  <div class="veil-cover"></div>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="lbl">Diagnóstico</span></div>
+
+  <div class="kicker" style="position:absolute;left:var(--safe);right:var(--safe);bottom:700px;
+       z-index:6;color:rgba(255,255,255,.80)">Tu negocio puede ser excelente.</div>
+
+  <h1 style="position:absolute;left:var(--safe);right:var(--safe);bottom:284px;z-index:6;color:#fff">
+    Tu web dice<br><span class="it" style="color:var(--orange)">otra cosa.</span>
+  </h1>
+
+  <div class="rule" style="position:absolute;left:var(--safe);right:var(--safe);bottom:222px;
+       z-index:6;background:rgba(255,255,255,.22)"></div>
+  <div style="position:absolute;left:var(--safe);bottom:148px;z-index:6;
+       font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.16em;
+       text-transform:uppercase;color:rgba(255,255,255,.84)">
+    <span style="color:var(--orange)">4 señales</span> de que tu web necesita una renovación
+  </div>
+  <div class="swipe"><span>Desliza</span><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 02 · PRIMERA IMPRESION ============ -->
+<div class="slide dark on-dark" id="s02">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Primera impresión</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:50%;
+              transform:translateY(-50%);z-index:4">
+    <h2 style="color:#fff;font-size:108px">Tu web es tu<br>primera impresión.</h2>
+    <div class="line" style="margin-top:46px">
+      Deciden en segundos. Y antes de hablar contigo.
+    </div>
+  </div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 03 · SEÑAL 01 ============ -->
+<div class="slide" id="s03">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Diseño</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:248px">
+    <div class="idx">Señal 01</div>
+    <h2 style="margin-top:30px">Se ve desactualizada.</h2>
+    <div class="line" style="margin-top:36px">
+      Si parece de hace diez años, tu cliente asume que tu negocio también.
+    </div>
+  </div>
+
+  <div class="frame lift-soft" style="left:var(--safe);right:var(--safe);bottom:190px;height:420px">
+    <div class="bar"><i></i><i></i><i></i><span>tuestudio.com</span></div>
+    <div style="overflow:hidden;height:100%">
+      <div class="old" style="transform:scale(.856)">
+        <div class="oh"><span class="olog">ESTUDIO GONZÁLEZ &amp; ASOC.</span>
+          <span class="onav">Inicio | Quiénes somos | Servicios | Contacto</span></div>
+        <div class="oban">BIENVENIDOS A NUESTRO SITIO WEB</div>
+        <div class="obody">
+          <div class="ocol">
+            <div class="ottl">Quiénes somos</div>
+            <p>Somos una empresa dedicada a brindar el mejor servicio a nuestros clientes, con una amplia trayectoria en el mercado y un equipo de profesionales altamente capacitados que trabaja día a día para superar sus expectativas.</p>
+          </div>
+          <div class="oimg">imagen.jpg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tag" style="right:16px;top:936px">Degradé azul de 2009</div>
+  <div class="foot"><img src="assets/logo-dark.png" alt=""></div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 04 · SEÑAL 02 ============ -->
+<div class="slide orange" id="s04">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Móvil</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:248px">
+    <div class="idx">Señal 02</div>
+    <h2 style="margin-top:30px">En el teléfono<br>se ve mal.</h2>
+  </div>
+  <div class="line" style="position:absolute;left:var(--safe);top:626px;max-width:490px">
+    Si tienen que hacer zoom para leerte, ya se fueron.
+  </div>
+
+  <div class="phone lift-soft" style="right:112px;bottom:206px;width:322px;height:604px">
+    <div class="notch"></div>
+    <div style="overflow:hidden;height:100%">
+      <div class="old" style="transform:scale(.46)">
+        <div class="oh"><span class="olog">ESTUDIO GONZÁLEZ &amp; ASOC.</span>
+          <span class="onav">Inicio | Quiénes somos | Servicios | Novedades | Contacto</span></div>
+        <div class="oban">BIENVENIDOS A NUESTRO SITIO WEB</div>
+        <div class="obody">
+          <div class="ocol">
+            <div class="ottl">Quiénes somos</div>
+            <p>Somos una empresa dedicada a brindar el mejor servicio a nuestros clientes, con una amplia trayectoria en el mercado y un equipo de profesionales altamente capacitados que trabaja día a día para superar sus expectativas.</p>
+            <p>No dude en contactarnos para solicitar más información sobre nuestros servicios y presupuestos sin cargo alguno.</p>
+          </div>
+          <div class="oimg">imagen.jpg</div>
+        </div>
+        <div class="obody">
+          <div class="ocol">
+            <div class="ottl">Nuestros servicios</div>
+            <p>Contamos con una amplia gama de servicios pensados para cubrir todas las necesidades de nuestros clientes, tanto particulares como empresas de distintos rubros y tamaños.</p>
+            <p>Nuestro equipo está en permanente capacitación para mantenerse actualizado frente a los cambios normativos que puedan afectar su situación particular.</p>
+            <p>Consúltenos sin compromiso y le responderemos a la brevedad posible.</p>
+          </div>
+        </div>
+        <div class="obody">
+          <div class="ocol">
+            <div class="ottl">Novedades</div>
+            <p>Manténgase informado sobre las últimas novedades del sector a través de nuestra sección de noticias, actualizada periódicamente por nuestro equipo.</p>
+            <p>Suscríbase a nuestro boletín para recibir información en su correo electrónico.</p>
+          </div>
+        </div>
+        <div class="ofoot"><span>© 2014 Estudio González &amp; Asoc. — Todos los derechos reservados</span>
+          <span class="ocount">Visitas: 004821</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tag" style="right:254px;bottom:164px">Se sale de la pantalla</div>
+  <div class="foot"><img src="assets/logo-white.png" alt=""></div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 05 · SEÑAL 03 ============ -->
+<div class="slide" id="s05">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Contenido</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:248px">
+    <div class="idx">Señal 03</div>
+    <h2 style="margin-top:30px">No queda claro<br>qué haces.</h2>
+  </div>
+  <div class="rule" style="position:absolute;left:var(--safe);right:var(--safe);top:558px"></div>
+  <div style="position:absolute;left:var(--safe);top:600px">
+    <div class="q">¿Qué haces?</div>
+    <div class="q">¿Para quién?</div>
+    <div class="q">¿Por qué debería elegirte?</div>
+    <div class="q">¿Cómo te contacto?</div>
+  </div>
+  <div class="line" style="position:absolute;left:var(--safe);right:var(--safe);bottom:214px">
+    Nadie se queda a averiguarlo.
+  </div>
+  <div class="foot"><img src="assets/logo-dark.png" alt=""></div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 06 · SEÑAL 04 ============ -->
+<div class="slide dark on-dark" id="s06">
+  <img class="bg" src="fotos_hi/px-37172472.jpg" style="object-position:50% 42%">
+  <div class="veil"></div>
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Percepción</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);bottom:214px;z-index:4">
+    <div class="idx">Señal 04</div>
+    <h2 style="margin-top:30px;color:#fff;font-size:100px">Tu web no representa<br>el nivel de tu negocio.</h2>
+    <div style="margin-top:48px;font-family:var(--f-body);font-weight:400;font-size:42px;
+                line-height:1.35;color:#A7ACB2;font-size:46px">
+      Tu negocio creció.
+    </div>
+    <div class="it" style="margin-top:10px;font-family:var(--f-display);font-size:62px;
+                line-height:1.2;color:var(--orange)">
+      Tu web quedó atrás.
+    </div>
+  </div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 07 · EL GIRO ============ -->
+<div class="slide sobre-claro" id="s07">
+  <img class="bg" src="fotos_hi/px-30699851.jpg" style="object-position:50% 14%">
+  <div class="veil-light"></div>
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">El giro</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);bottom:268px;z-index:4">
+    <h2 style="font-size:104px">¿Y si tu web<br><span class="it">estuviera a la altura</span><br>de tu negocio?</h2>
+  </div>
+  <div class="rule" style="position:absolute;left:var(--safe);right:var(--safe);bottom:220px;z-index:4"></div>
+  <div class="line" style="position:absolute;left:var(--safe);right:var(--safe);bottom:138px;z-index:4">
+    No necesitas cambiar quién eres.
+  </div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 08 · ANTES / DESPUES ============ -->
+<div class="slide dark" id="s08">
+  <div class="top"><span class="lbl">Caso real</span><span class="lbl">Escribanía Acosta Pastore</span></div>
+
+  <div style="position:absolute;left:var(--safe);top:236px;width:432px">
+    <span class="lbl" style="display:block;margin-bottom:16px">De esto</span>
+    <div style="border-radius:4px;overflow:hidden;opacity:.56">
+      <img src="assets/resena-antes-poster.jpg" style="width:100%;display:block;filter:grayscale(1)">
+    </div>
+  </div>
+
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:512px">
+    <span class="lbl" style="display:block;margin-bottom:16px;color:var(--orange)">A esto</span>
+    <div class="lift" style="border-radius:4px;overflow:hidden">
+      <img src="assets/resena-despues-poster.jpg" style="width:100%;display:block">
+    </div>
+  </div>
+
+  <div class="rule" style="position:absolute;left:var(--safe);right:var(--safe);top:1000px"></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:1046px;
+              font-family:var(--f-display);font-weight:700;font-size:72px;
+              letter-spacing:-.018em;color:var(--paper);line-height:1.16">
+    Mismo negocio.<br><span class="it" style="color:var(--orange)">Nueva percepción.</span>
+  </div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 09 · QUE HACEMOS ============ -->
+<div class="slide white" id="s09">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Qué hacemos</span></div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:250px">
+    <h2 style="font-size:86px">Renovamos tu web<br>para que tu negocio<br>vuelva a verse<br>como merece.</h2>
+  </div>
+  <div style="position:absolute;left:var(--safe);right:var(--safe);bottom:204px">
+    <div class="item"><span class="n">01</span><h3>Diseño moderno</h3></div>
+    <div class="item"><span class="n">02</span><h3>Experiencia móvil</h3></div>
+    <div class="item"><span class="n">03</span><h3>Estructura clara</h3></div>
+    <div class="item" style="border-bottom:1px solid var(--line)"><span class="n">04</span><h3>Base SEO</h3></div>
+  </div>
+  <div class="foot"><img src="assets/logo-dark.png" alt=""></div>
+  <div class="swipe"><svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- ============ 10 · CTA ============ -->
+<div class="slide orange" id="s10">
+  <div class="top"><span class="lbl">Renueva Smart</span><span class="lbl">Muestra gratis</span></div>
+
+  <div style="position:absolute;left:var(--safe);right:var(--safe);top:432px;z-index:4">
+    <h2>¿Tu web necesita<br>una renovación?</h2>
+    <div class="line" style="margin-top:46px">
+      Envíanos tu web por DM. La vemos y te contamos qué cambiaríamos.
+    </div>
+    <div class="it" style="margin-top:56px;font-family:var(--f-display);font-size:52px;
+                letter-spacing:-.018em;color:var(--ink);display:inline-block;
+                border-bottom:3px solid var(--ink);padding-bottom:14px">
+      Escríbenos por DM →
+    </div>
+  </div>
+
+  <div class="rule" style="position:absolute;left:var(--safe);right:var(--safe);bottom:262px;z-index:4"></div>
+  <div class="foot"><img src="assets/logo-white.png" alt=""></div>
+  <div style="position:absolute;right:var(--safe);bottom:68px;z-index:9;
+              font-family:var(--f-body);font-weight:400;font-size:32px;line-height:1.35;
+              color:rgba(255,255,255,.94);text-align:right">
+    Tu negocio cambió.<br>Tu web también debería.
+  </div>
+</div>
+
+</body></html>
