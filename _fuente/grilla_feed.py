@@ -74,7 +74,9 @@ def tile(i, d, mat):
         col1, col2, colb = "#fff", "var(--orange)", "#A7ACB2"
     elif mat == "naranja":
         clases, logo, fondo = "slide orange", "assets/logo-white.png", ""
-        col1, col2, colb = "#fff", "var(--ink)", "rgba(255,255,255,.94)"
+        # tinta en la primera linea y blanco en la italica: sobre naranja el
+        # negro da el peso y la italica blanca salta. Al reves la italica se hunde.
+        col1, col2, colb = "var(--ink)", "#fff", "rgba(255,255,255,.94)"
     else:
         clases, logo, fondo = "slide white", "assets/logo-dark.png", ""
         col1, col2, colb = "var(--ink)", "var(--orange)", "var(--body)"
@@ -120,3 +122,58 @@ print("grilla-feed.html con", N, "portadas")
 
 for i, d in enumerate(PLAN):
     print("  %02d  S%d  %-38s %s" % (i + 1, d[0], d[1][:38], material[i]))
+
+# ------------------------------------------------------------------
+# Render de las 19 portadas y armado de FEED.jpg.
+# Antes esto se hacia a mano y el docstring mentia: al cambiar la tabla
+# PLAN se regeneraba el HTML pero FEED.jpg y portadas/ quedaban viejas.
+# ------------------------------------------------------------------
+import shutil, sys, time
+from PIL import Image, ImageDraw
+
+TILE, GAP, HEAD = 302, 3, 56
+RAIZ = HERE.parent
+DEST = RAIZ / "PLAN-CONTENIDO" / "portadas"
+DEST.mkdir(parents=True, exist_ok=True)
+TMP = HERE / "_tiles"
+
+subprocess.run([sys.executable, "render.py", "grilla-feed.html", "_tiles",
+                ",".join("t%02d" % i for i in range(N)), "1.0"],
+               cwd=HERE, check=True, stdout=subprocess.DEVNULL)
+
+def guardar(origen, destino):
+    """OneDrive a veces tiene el archivo tomado; reintentar."""
+    for _ in range(12):
+        try:
+            shutil.copy(origen, destino); return
+        except OSError:
+            time.sleep(1.5)
+    raise SystemExit("no se pudo escribir " + str(destino))
+
+for i in range(N):
+    guardar(TMP / ("t%02d.png" % i), DEST / ("post-%02d.png" % (i + 1)))
+
+# Instagram muestra lo mas nuevo primero: los 3 fijados y despues los
+# posteos en orden inverso al de publicacion.
+caras = [RAIZ / ("FIJADO-%d/RS-F%d-01.png" % (k, k)) for k in (1, 2, 3)]
+caras += [DEST / ("post-%02d.png" % n) for n in range(N, 0, -1)]
+
+filas = (len(caras) + 2) // 3
+feed = Image.new("RGB", (3 * TILE + 2 * GAP, HEAD + filas * TILE + (filas - 1) * GAP),
+                 "#FFFFFF")
+d = ImageDraw.Draw(feed)
+d.rectangle([0, 0, feed.width, HEAD], fill="#14171A")
+d.text((14, 14), "FEED @renuevasmart · 3 fijados + %d posteos" % N, fill="#FFFFFF")
+d.text((14, 32), "fotos: oficina profesional, obra y ciudad · ninguna se repite",
+       fill="#9AA0A6")
+for i, p in enumerate(caras):
+    im = Image.open(p).convert("RGB")
+    lado = im.width                      # recorte 1:1 real de la grilla de IG
+    arriba = (im.height - lado) // 2
+    im = im.crop((0, arriba, lado, arriba + lado)).resize((TILE, TILE), Image.LANCZOS)
+    feed.paste(im, ((i % 3) * (TILE + GAP), HEAD + (i // 3) * (TILE + GAP)))
+
+guardar_feed = RAIZ / "PLAN-CONTENIDO" / "FEED.jpg"
+feed.save(guardar_feed, quality=92)
+shutil.rmtree(TMP, ignore_errors=True)
+print("portadas/post-01..%02d.png  ·  FEED.jpg %dx%d" % (N, feed.width, feed.height))

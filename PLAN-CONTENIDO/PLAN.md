@@ -76,4 +76,7 @@ negocio real que no es cliente puede traer más problema que alcance.
 - `FEED.jpg` — la grilla simulada, con el recorte 1:1 real de Instagram.
 - `portadas/post-NN.png` — las 19 portadas a 1080×1350, listas para usar como punto de
   partida de cada carrusel.
-- `_fuente/grilla_feed.py` — el generador: se edita la tabla `PLAN` y sale todo de nuevo.
+- `_fuente/grilla_feed.py` — el generador: se edita la tabla `PLAN`, se corre, y salen de
+  nuevo el HTML, las 19 portadas y `FEED.jpg`. Antes sólo escribía el HTML y las portadas
+  había que rehacerlas a mano, así que un cambio en `PLAN` dejaba el feed simulado
+  diciendo algo que ya no era cierto.
