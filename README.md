@@ -8,16 +8,16 @@ sistema, y Claude Code las toma solo al abrir la carpeta.
 
 ## Puesta en marcha
 
-```bash
-pip install playwright pillow
-playwright install chromium
+Un solo comando, con Python ya instalado:
 
-cd _fuente
-python bootstrap.py
+```bash
+cd _fuente && python bootstrap.py
 ```
 
-`bootstrap.py` baja lo que el repo no versiona: las fuentes en base64, las 24 fotos que
-usan las piezas y las capturas del caso real. Es idempotente.
+Instala las librerías (`playwright`, `pillow`), baja el navegador que usa Playwright para
+renderizar, y trae lo que el repo no versiona: las fuentes en base64, las 24 fotos que
+usan las piezas y las capturas del caso real. Es idempotente: lo que ya está no se
+vuelve a bajar.
 
 ## Generar las piezas
 

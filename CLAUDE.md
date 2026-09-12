@@ -134,7 +134,7 @@ destacado tipo "Nosotros", "Branding" o "Inspiración".
 
 ```bash
 cd _fuente
-python bootstrap.py          # primera vez: fuentes, fotos y capturas del caso
+python bootstrap.py          # primera vez: librerias, fuentes, fotos y capturas
 
 # carruseles
 python render.py post-1.src.html ../FIJADO-1 s01,s02,... 2.0   # PNGs retina

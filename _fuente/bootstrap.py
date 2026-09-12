@@ -5,7 +5,8 @@ porque se pueden volver a bajar. Esto las trae.
 
     python bootstrap.py
 
-Es idempotente: lo que ya existe no se vuelve a bajar.
+Instala las librerias, baja las fuentes, las fotos y las capturas del caso.
+Es idempotente: lo que ya existe no se vuelve a bajar ni reinstalar.
 """
 import pathlib
 import re
@@ -16,6 +17,25 @@ import urllib.request
 HERE = pathlib.Path(__file__).parent
 FOTOS = HERE / "fotos_hi"
 UA = {"User-Agent": "Mozilla/5.0"}
+
+
+def dependencias():
+    """playwright y pillow, mas el navegador que usa playwright para renderizar."""
+    faltan = []
+    for modulo, paquete in [("playwright", "playwright"), ("PIL", "pillow")]:
+        try:
+            __import__(modulo)
+        except ImportError:
+            faltan.append(paquete)
+    if faltan:
+        print("  librerias: instalando %s..." % ", ".join(faltan))
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", *faltan], check=True)
+    else:
+        print("  librerias: ya estan")
+    # el navegador se baja una sola vez; si ya esta, termina al instante
+    print("  navegador: verificando Chromium...")
+    subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"],
+                   check=True, capture_output=True)
 
 
 def fuentes():
@@ -77,6 +97,7 @@ def caso():
 
 
 print("Preparando el proyecto...\n")
+dependencias()
 fuentes()
 fotos()
 caso()

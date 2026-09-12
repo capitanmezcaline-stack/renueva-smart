@@ -49,3 +49,7 @@ _fuente/assets/resena-*.mp4
 _fuente/assets/etiqueta-*.png
 _fuente/assets/_caso.jpg
 _fuente/assets/_logo-sitio-520.png
+
+# --- paquete de entrega: se rearma solo, no se versiona ---
+PARA SUBIR/
+*.zip
