@@ -24,6 +24,8 @@ _fuente/grilla-feed.html
 _fuente/destacados.html
 
 # --- pruebas, respaldos y scratch ---
+_post-*.jpg
+_revision-*.jpg
 _direcciones/
 _fuente/_bak-*
 _fuente/_sitio.*

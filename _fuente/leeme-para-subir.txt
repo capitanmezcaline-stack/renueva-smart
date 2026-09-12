@@ -1,0 +1,75 @@
+RENUEVA SMART - PIEZAS LISTAS PARA PUBLICAR
+============================================
+
+Todo lo de esta carpeta esta listo para subir a Instagram tal cual.
+No hay que editar ni redimensionar nada.
+
+
+QUE HAY ACA
+-----------
+
+CARRUSELES FIJADOS/        Los 3 posteos que van fijados arriba del perfil.
+POSTEOS DEL PLAN/          Los 5 carruseles de la semana 1, listos.
+DESTACADOS/                Las 7 historias destacadas (los circulitos).
+PORTADAS DE LO QUE FALTA/  Las portadas de los posteos 06 a 19, que
+                           todavia no estan armados.
+COMO VA A QUEDAR EL FEED.jpg   La simulacion de la grilla del perfil.
+
+
+COMO SUBIR UN CARRUSEL FIJADO
+-----------------------------
+
+1. Abri la carpeta del fijado (por ejemplo "FIJADO 1 - ...").
+2. En Instagram, nuevo posteo, y elegi los slides EN ORDEN:
+   slide-01, slide-02, slide-03... hasta el ultimo.
+   El orden importa: el 01 es la portada, la que se ve en la grilla.
+3. Abri "TEXTO DEL POST.txt" y copia todo. Ese es el texto del posteo,
+   con los hashtags incluidos al final.
+4. Publicalo.
+5. Cuando este publicado: toca los tres puntitos del posteo y elegi
+   "Fijar en tu perfil".
+
+Hacelo con los 3, en orden: primero el FIJADO 1, despues el 2 y el 3.
+
+
+COMO SUBIR LOS POSTEOS DEL PLAN
+-------------------------------
+
+Igual que un fijado, pero SIN fijarlos al perfil.
+
+Van uno por dia, en el orden de los numeros: 01, 02, 03, 04, 05.
+Ese orden esta pensado para que la grilla quede como se ve en
+"COMO VA A QUEDAR EL FEED.jpg".
+
+Las carpetas de "PORTADAS DE LO QUE FALTA" NO se suben: son la
+portada sola de posteos que todavia hay que armar.
+
+
+COMO SUBIR UN DESTACADO
+-----------------------
+
+1. Abri la carpeta del destacado (por ejemplo "1 - Tu web").
+2. Subi como HISTORIA los archivos historia-01, historia-02, etc.
+   EN ORDEN. Podes subirlas todas juntas de una.
+3. Cuando estan publicadas, anda a tu perfil y toca "Nuevo" en los
+   destacados (el circulito con el +).
+4. Selecciona esas historias que acabas de subir, en el mismo orden.
+5. Ponele de nombre lo que dice la carpeta, SIN el numero.
+   Ejemplo: carpeta "1 - Tu web"  ->  nombre del destacado: "Tu web"
+6. Cuando te pida la tapa, elegi "Editar tapa" y subi el archivo
+   "TAPA (la foto del circulo).png" desde la galeria.
+
+Hacelo con los 7, en el orden de los numeros. Ese orden esta pensado:
+el primero es el mas tocado, y ahi va el problema del cliente.
+
+
+IMPORTANTE
+----------
+
+- Subi siempre desde la galeria del telefono, sin filtros ni recortes.
+  Las piezas ya estan en el tamano exacto que usa Instagram.
+
+- Si Instagram te ofrece recortar, elegi la opcion que muestra la
+  imagen COMPLETA (el iconito de las flechitas abajo a la izquierda).
+
+- No cambies el orden de los archivos. Estan numerados por algo.
