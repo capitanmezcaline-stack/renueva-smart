@@ -1,0 +1,48 @@
+/* ---------- E01 · el muro de texto ----------
+   Tipografia de la web vieja, dos columnas, justificado y diminuto.
+   Una sola linea en naranja: la unica que hacia falta leer. */
+.muro{padding:26px 30px;column-count:2;column-gap:28px;
+      font-family:Georgia,'Times New Roman',serif;color:#63635F}
+.muro h4{font-family:Georgia,serif;font-size:21px;color:#2B2B2B;margin:0 0 10px;
+         font-weight:700;break-after:avoid}
+.muro p{font-size:12.5px;line-height:1.72;text-align:justify;margin:0 0 11px}
+.muro .clave{color:var(--orange);font-weight:700}
+
+/* ---------- E02 · plano vs. con jerarquia ----------
+   Sin marcos: el resto del carrusel ya esta lleno de navegadores.
+   Dos columnas de tipografia pura sobre negro. */
+.jer{display:flex;gap:64px}
+.jer > div{flex:1;min-width:0}
+.jer .cab{font-family:var(--f-body);font-weight:700;font-size:19px;letter-spacing:.18em;
+          text-transform:uppercase;padding-bottom:18px;margin-bottom:26px;
+          border-bottom:1px solid #22262B}
+.jer .mal .cab{color:#6B7278}
+.jer .bien .cab{color:var(--orange)}
+/* plano: los cinco elementos exactamente iguales */
+.jer .mal p{font-family:var(--f-body);font-weight:600;font-size:31px;line-height:1.42;
+            color:#C2C7CC;margin:0 0 16px;letter-spacing:-.008em}
+/* con jerarquia: cada uno hace su trabajo */
+.jer .bien .e1{font-family:var(--f-body);font-weight:700;font-size:16px;letter-spacing:.22em;
+               text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.jer .bien .e2{font-family:var(--f-display);font-weight:700;font-size:54px;line-height:1.06;
+               letter-spacing:-.022em;color:#fff;margin-bottom:18px}
+.jer .bien .e3{font-family:var(--f-body);font-size:22px;line-height:1.5;color:#9AA0A6;
+               margin-bottom:26px}
+.jer .bien .e4{display:inline-block;background:var(--orange);color:#fff;font-size:15px;
+               font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 24px}
+.jer .bien .e5{font-family:var(--f-body);font-size:14px;color:#6B7278;margin-top:22px}
+
+/* ---------- E04 · la pagina entera, en tira ----------
+   El boton no esta escondido detras de nada: esta lejos.
+   Dibujarlo como DISTANCIA y no como una zona marcada mas. */
+.tira{background:#fff;height:100%;display:flex;flex-direction:column}
+.tira .th{height:30px;background:#14171A;flex:none}
+.tira .tb{background:#EAE9E5;margin:11px 13px 0;flex:none;border-radius:2px}
+.tira .tt{background:#D6D5D0;margin:11px 13px 0;height:9px;border-radius:2px;flex:none}
+.tira .tt.corta{width:56%}
+.tira .tbtn{margin:16px 13px 14px;height:19px;width:88px;background:#14171A;
+            border-radius:2px;flex:none}
+.flecha-larga{position:absolute;z-index:8;width:2px;background:var(--orange)}
+.flecha-larga::after{content:"";position:absolute;bottom:-1px;left:-5px;
+     border-left:6px solid transparent;border-right:6px solid transparent;
+     border-top:9px solid var(--orange)}
