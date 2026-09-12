@@ -55,7 +55,7 @@ recalcular: se corre `_fuente/grilla_feed.py`.
 | 18 | 4 | Qué incluye Renueva Smart | blanco |
 | 19 | 4 | Web Roast #3 | naranja |
 
-**Producidos hasta ahora:** 01, 02, 03 y 04, en `POSTS/`. Cada uno tiene sus PNG a 2160×2700,
+**Producidos hasta ahora:** 01 a 05 — la semana 1 completa — en `POSTS/`. Cada uno tiene sus PNG a 2160×2700,
 el HTML autónomo y el CAPTION. Las portadas de `portadas/` son el punto de partida: la
 portada real del carrusel tiene que coincidir con la de la grilla, o el feed simulado
 deja de decir la verdad.

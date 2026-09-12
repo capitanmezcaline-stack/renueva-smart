@@ -1,0 +1,41 @@
+/* ---------- S04 · el esqueleto de la pagina ----------
+   "Base SEO" es abstracto y no se puede fotografiar. Lo que si se
+   dibuja es lo que el copy promete: una estructura clara. Asi que se
+   muestra el esquema de encabezados, con las etiquetas a la vista. */
+.arbol{background:#fff;border-radius:4px;padding:34px 38px}
+.arbol .fila{display:flex;align-items:baseline;gap:20px;padding:15px 0;
+             border-bottom:1px solid #EDECE8}
+.arbol .fila:last-child{border-bottom:0}
+.arbol .et{font-family:var(--f-ui);font-size:17px;font-weight:700;color:var(--orange);
+           flex:0 0 46px;letter-spacing:.04em}
+.arbol .tx{font-family:var(--f-body);font-size:30px;color:#1B1F23;letter-spacing:-.01em}
+.arbol .n2{padding-left:44px}
+.arbol .n2 .et{color:#A9AFB5}
+.arbol .n3{padding-left:88px}
+.arbol .n3 .et{color:#C6CBD0}
+.arbol .n3 .tx{font-size:26px;color:#5A6066}
+
+/* ---------- S06 · el arco del servicio en cuatro miniaturas ----------
+   Cuatro estados de la MISMA pagina, no cuatro iconos: antes, el
+   analisis encima, el esqueleto de la propuesta y el resultado. */
+.pasos{display:flex;gap:20px}
+.pasos > div{flex:1;min-width:0;position:relative}
+.pasos .mini{height:240px;background:#fff;border-radius:3px;overflow:hidden;
+             position:relative;box-shadow:0 10px 26px rgba(11,12,14,.12)}
+.pasos .mini > div{position:absolute;inset:0;overflow:hidden}
+.pasos .marca{position:absolute;z-index:4;border:2px solid var(--orange);
+              background:rgba(255,106,0,.16);border-radius:2px}
+.pasos .wire{position:absolute;inset:0;background:#fff;padding:14px 12px}
+.pasos .wire i{display:block;background:#E4E3DF;border-radius:2px;margin-bottom:7px}
+.pasos .wire i.alto{height:42px;background:#D8D7D2;margin-bottom:10px}
+.pasos .wire i.b{height:6px}
+.pasos .wire i.c{height:6px;width:64%}
+.pasos .wire i.btn{height:12px;width:38%;background:var(--orange);margin-top:10px}
+.pasos .pie{font-family:var(--f-body);font-weight:700;font-size:20px;letter-spacing:.14em;
+            text-transform:uppercase;margin-top:18px;color:var(--orange)}
+.pasos .num{font-family:var(--f-body);font-weight:700;font-size:17px;letter-spacing:.2em;
+            color:var(--grey);margin-bottom:10px}
+/* las flechas del copy —antes > analisis > renovacion > despues— dibujadas */
+.pasos > div:not(:last-child)::after{content:"";position:absolute;right:-14px;top:147px;
+     width:10px;height:10px;border-top:2px solid var(--orange);
+     border-right:2px solid var(--orange);transform:rotate(45deg)}

@@ -10,7 +10,7 @@ PLAN = [
  (1,"Web Roast #1","Web roast","#01","Analizamos una web real, sin filtro.","Web roast"),
  (1,"5 errores de diseño","Cinco errores","de diseño web.","Los que hacen que una web parezca poco profesional.","Diseño"),
  (1,"¿Tu web parece de 2015?","¿Tu web parece","de 2015?","Seis detalles que la delatan.","Diagnóstico"),
- (1,"Presentación de Renueva Smart","Renovamos webs","que quedaron atrás.","Quiénes somos y cómo trabajamos.","Quiénes somos"),
+ (1,"Presentación de Renueva Smart","Tu negocio cambió.","Tu web también debería.","Quiénes somos y cómo trabajamos.","Quiénes somos"),
 
  (2,"Antes/después restaurante","Antes y después:","un restaurante.","Mismo local, otra primera impresión.","Caso"),
  (2,"Antes/después inmobiliaria","Antes y después:","una inmobiliaria.","Ordenar para que encuentren.","Caso"),
