@@ -101,6 +101,12 @@ lee como error.
   El hero va con **foto a sangre y tipografía encima**, como renuevasmart.com. Un hero
   partido en dos columnas con una foto chica al costado es un patrón viejo y arruina el
   "después": el slide tiene que dar envidia, no explicar que da envidia.
+  **El mock tiene paleta propia —verde profundo, nunca el naranja de la marca—** y su
+  propio logo (monograma "GA" en caja de hairline + nombre en Fraunces). Es la web de un
+  cliente ficticio: si usa el naranja de Renueva, el lector lee "página de Renueva Smart"
+  en vez de "así te queda a vos". Con el verde, el naranja queda reservado para lo que sí
+  es la voz de Renueva —las etiquetas, las anotaciones, el "NECESITA RENOVACIÓN"— y el
+  antes/después se lee de un golpe.
 - **`.frame` / `.phone`** — navegador y teléfono, con sombra larga (`.lift`). Esa sombra
   es la diferencia entre un mockup premium y una captura pegada.
 

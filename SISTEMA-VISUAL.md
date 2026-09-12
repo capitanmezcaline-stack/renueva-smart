@@ -276,6 +276,20 @@ verse premium de un vistazo, no describirse como premium.
 La primera versión partía el hero en dos columnas con una foto chica al costado. Eso *es*
 el patrón que el carrusel está criticando dos slides antes; el antes/después se anulaba.
 
+**Paleta propia, no la de Renueva.** El mock lleva verde profundo (`#2E6B52`), tinta
+verde-negra (`#16201C`) y un verde claro (`#A9CBB9`) que es el único que se usa sobre la
+foto. Arrancó con el naranja de la marca y estaba mal: el lector leía "página de Renueva
+Smart", no "así te queda a vos". Separadas las dos paletas, el naranja queda reservado
+para la voz de Renueva —etiquetas, anotaciones, el sello "NECESITA RENOVACIÓN" sobre la
+web vieja— y el antes/después se entiende sin leer una palabra. En el slide 6 del Fijado 2,
+además, el botón verde sobre el fondo naranja del slide es el contraste que sostiene la
+pieza.
+
+**El logo del estudio** es un monograma "GA" en caja de hairline verde más el nombre en
+Fraunces 600, con el ampersand en itálica verde. Nada de descriptor chiquito debajo: el
+mock se usa a `scale(.414)` en el antes/después y a esa escala cualquier línea de 9px se
+convierte en una mancha gris. El monograma, en cambio, sobrevive como forma.
+
 La foto del hero se elige con el mismo criterio que el resto (oficina, obra o ciudad) y
 lleva `filter:brightness(1.22)` porque el velo encima se la come. Cuidado con las fotos
 que datan la pieza: la primera candidata tenía gente con barbijo, y la segunda resultó ser
