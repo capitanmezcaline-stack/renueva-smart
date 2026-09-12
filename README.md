@@ -42,8 +42,14 @@ python historias_preguntas.py
 python historias_gratis.py
 python destacados.py            # las 7 tapas
 
+# Posteos del plan — se editan en posts/pNN-cuerpo.html
+python armar_post.py p03 && python render.py posts/p03.src.html ../POSTS/03-cinco-errores s01,...,s07 2.0
+
 # Plan de contenido — 19 portadas + la simulación del feed
 python grilla_feed.py
+
+# Paquete de entrega — "PARA SUBIR/" y el ZIP, desde las piezas ya exportadas
+python empaquetar.py
 ```
 
 `render.py` toma escala: `1.0` para revisar rápido, `2.0` para el PNG retina que se
@@ -56,6 +62,7 @@ abre en cualquier navegador sin dependencias.
 FIJADO-1/      10 slides · "¿Tu web necesita una renovación?"  → captar
 FIJADO-2/      11 slides · "Qué hacemos"                        → explicar
 FIJADO-3/       8 slides · "Así transformamos una web"          → demostrar
+POSTS/          5 carruseles del plan, la semana 1 completa     → ver PLAN.md
 DESTACADOS/     7 destacados, 43 historias                      → ver LEEME.md
 PLAN-CONTENIDO/ 19 portadas y 4 semanas de plan                 → ver PLAN.md
 SISTEMA-VISUAL.md  paleta, tipografía, fotografía y composición
@@ -72,6 +79,16 @@ _fuente/        generadores, HTML fuente y utilidades
 | `fetch_pexels.py` | Baja fotos nuevas de Pexels |
 | `capturar_caso.py` | Recaptura los dos sitios del caso Acosta Pastore |
 | `montage.py` | Grilla de revisión de un carrusel |
+| `empaquetar.py` | Arma `PARA SUBIR/` y el ZIP con nombres para quien publica |
+
+## Las piezas ya exportadas
+
+Los PNG no se versionan: pesan casi 90 MB y se regeneran con los comandos de arriba. Para
+descargarlas sin instalar nada están publicadas como **[release
+`v1-piezas`](https://github.com/capitanmezcaline-stack/renueva-smart/releases/tag/v1-piezas)**,
+en un ZIP con las carpetas renombradas para subir a Instagram directo desde el teléfono.
+Ese archivo se reemplaza cada vez que se agregan piezas, así que el link siempre trae lo
+último.
 
 ## Notas
 
