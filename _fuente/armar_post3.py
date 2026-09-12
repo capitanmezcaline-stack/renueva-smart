@@ -5,7 +5,8 @@ HERE = pathlib.Path(__file__).parent
 
 # el CSS base se toma del Fijado 1 para que los dos fijados no se desincronicen
 base = HERE.joinpath("post-1.src.html").read_text(encoding="utf-8").split("<style>")[1].split("</style>")[0]
-extra = HERE.joinpath("post-3-extra.css").read_text(encoding="utf-8")
+extra = (HERE.joinpath("_web-nueva.css").read_text(encoding="utf-8")
+         + HERE.joinpath("post-3-extra.css").read_text(encoding="utf-8"))
 cuerpo = HERE.joinpath("post-3-cuerpo.html").read_text(encoding="utf-8")
 
 FLECHA = ('<svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" '

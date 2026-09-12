@@ -96,7 +96,11 @@ lee como error.
   pieza sirve escalada para todo. Nunca se muestra la web real de un negocio
   identificable para ilustrar un problema.
 - **`.new`** — su contracara: una web bien hecha, también inventada, para mostrar el
-  "después" sin gastar el caso real.
+  "después" sin gastar el caso real. Vive en **`_fuente/_web-nueva.css`**, un solo archivo
+  que los tres ensambladores anteponen al CSS base; no se copia en los `-extra.css`.
+  El hero va con **foto a sangre y tipografía encima**, como renuevasmart.com. Un hero
+  partido en dos columnas con una foto chica al costado es un patrón viejo y arruina el
+  "después": el slide tiene que dar envidia, no explicar que da envidia.
 - **`.frame` / `.phone`** — navegador y teléfono, con sombra larga (`.lift`). Esa sombra
   es la diferencia entre un mockup premium y una captura pegada.
 

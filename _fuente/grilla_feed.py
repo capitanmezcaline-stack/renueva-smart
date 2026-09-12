@@ -19,7 +19,7 @@ PLAN = [
  (2,"Rediseño en 30 segundos","Un rediseño","en 30 segundos.","El antes y el después, rápido.","Antes y después"),
 
  (3,"Qué debe tener una web moderna","Qué tiene hoy","una web moderna.","Seis cosas que ya no son opcionales.","Autoridad"),
- (3,"Errores en mobile","Los errores","que se ven en el celular.","Donde te mira casi todo el mundo.","Móvil"),
+ (3,"Errores en mobile","Los errores","que se ven en el teléfono.","Donde te mira casi todo el mundo.","Móvil"),
  (3,"CTA que debería tener tu web","El botón que","tu web no tiene.","Y por eso nadie te escribe.","Conversión"),
  (3,"Web Roast #2","Web roast","#02","Analizamos una web real, sin filtro.","Web roast"),
  (3,"No necesitas rehacer todo tu negocio","No necesitas rehacer","todo tu negocio.","Sólo que tu web lo cuente mejor.","Autoridad"),

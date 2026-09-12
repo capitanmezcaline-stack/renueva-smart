@@ -262,9 +262,25 @@ Nunca se muestra la web real de un negocio identificable para ilustrar un proble
 
 Agregada en el Fijado 2. Mismo principio que `.old` pero al revés: una web **bien hecha**,
 también inventada, para poder mostrar el "después" sin depender del material del caso real
-(que está limitado a 700px). Plus Jakarta de cuerpo, Fraunces en el titular del mock,
-eyebrow naranja, botón en tinta, foto real de la librería. Tiene variante `.movil` de
-390px para meterla dentro del teléfono.
+(que está limitado a 700px). Definida una sola vez en **`_fuente/_web-nueva.css`**, que
+`armar_post2.py`, `armar_post3.py` y `armar_post.py` anteponen al CSS base. Tiene variante
+`.movil` de 390px para meterla dentro del teléfono.
+
+**El hero va con foto a sangre**, al ras de los cuatro bordes, y la tipografía encima:
+`.nhero` en `position:relative` con la `<img>` en `object-fit:cover`, un velo en degradé
+diagonal (`.nvelo`, opaco a la izquierda y casi limpio a la derecha) y el bloque de texto
+anclado abajo a la izquierda —eyebrow naranja, titular Fraunces blanco, botón naranja—.
+Es el mismo esquema que usa renuevasmart.com, y por eso funciona: el "después" tiene que
+verse premium de un vistazo, no describirse como premium.
+
+La primera versión partía el hero en dos columnas con una foto chica al costado. Eso *es*
+el patrón que el carrusel está criticando dos slides antes; el antes/después se anulaba.
+
+La foto del hero se elige con el mismo criterio que el resto (oficina, obra o ciudad) y
+lleva `filter:brightness(1.22)` porque el velo encima se la come. Cuidado con las fotos
+que datan la pieza: la primera candidata tenía gente con barbijo, y la segunda resultó ser
+un baño de spa —a tamaño de miniatura pasaba por mármol—. Siempre mirar el hero al 100%
+antes de aprobarlo.
 
 Tener las dos —`.old` y `.new`— permite armar un antes/después genérico en cualquier
 slide, sin gastar el caso de Acosta Pastore, que se reserva para el cierre.

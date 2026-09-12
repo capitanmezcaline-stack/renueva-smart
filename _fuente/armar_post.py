@@ -24,6 +24,8 @@ if not cuerpo_f.exists():
 base = HERE.joinpath("post-1.src.html").read_text(encoding="utf-8").split("<style>")[1].split("</style>")[0]
 extra_f = POSTS / (nombre + "-extra.css")
 extra = extra_f.read_text(encoding="utf-8") if extra_f.exists() else ""
+if 'class="new' in cuerpo_f.read_text(encoding="utf-8"):
+    extra = HERE.joinpath("_web-nueva.css").read_text(encoding="utf-8") + extra
 cuerpo = cuerpo_f.read_text(encoding="utf-8")
 
 FLECHA = ('<svg viewBox="0 0 62 14" fill="none"><path d="M0 7h56M49 1.5l7 5.5-7 5.5" '
