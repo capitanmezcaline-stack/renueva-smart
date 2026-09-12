@@ -53,3 +53,9 @@ _fuente/assets/_logo-sitio-520.png
 # --- paquete de entrega: se rearma solo, no se versiona ---
 PARA SUBIR/
 *.zip
+
+# --- posteos del plan: PNGs y HTML se regeneran ---
+POSTS/*/slide-*.png
+POSTS/*/post-*.html
+POSTS/*/_render/
+_fuente/posts/*.src.html
