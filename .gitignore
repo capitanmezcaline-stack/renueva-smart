@@ -61,3 +61,7 @@ POSTS/*/slide-*.png
 POSTS/*/post-*.html
 POSTS/*/_render/
 _fuente/posts/*.src.html
+
+# --- case study de Behance: paneles se regeneran con render_behance.py ---
+BEHANCE/*.jpg
+_fuente/behance/_feed-crop.jpg

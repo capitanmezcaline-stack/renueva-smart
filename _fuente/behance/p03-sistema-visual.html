@@ -1,0 +1,89 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Renueva Smart — Behance sistema visual</title>
+<link rel="stylesheet" href="../renueva-fonts.css">
+<link rel="stylesheet" href="_behance-base.css">
+<style>
+.panel.dark{padding:150px var(--safe) 140px}
+.cab{margin-bottom:70px}
+.cab h2{font-size:74px;max-width:900px}
+.cab .sub{margin-top:22px;font-family:var(--f-body);font-size:22px;line-height:1.5;
+          color:#9AA0A6;max-width:640px}
+
+/* --- tipografia --- */
+.tipo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#22262B;
+      border:1px solid #22262B;margin-bottom:1px}
+.tipo > div{background:var(--ink);padding:56px 60px}
+.tipo .muestra{font-family:var(--f-display);font-weight:700;font-size:112px;
+               letter-spacing:-.02em;line-height:1;color:#fff;margin-bottom:30px}
+.tipo .muestra.cuerpo{font-family:var(--f-body);font-weight:400;font-size:64px;
+                      letter-spacing:-.01em}
+.tipo .nombre{font-family:var(--f-body);font-weight:700;font-size:17px;color:var(--orange);
+             letter-spacing:.02em;margin-bottom:8px}
+.tipo .uso{font-family:var(--f-body);font-size:15px;color:#7C8288;line-height:1.5;max-width:420px}
+
+/* --- color y foto, lado a lado --- */
+.mitad{display:flex;gap:1px;background:#22262B;border:1px solid #22262B;margin-top:1px}
+.mitad > div{background:var(--ink);flex:1;padding:52px 56px}
+.mitad h4{font-family:var(--f-body);font-weight:700;font-size:14px;letter-spacing:.14em;
+          text-transform:uppercase;color:#7C8288;margin-bottom:32px}
+
+.colores{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.colores .swatch-name,.colores .swatch-hex{color:#fff}
+.colores .swatch-hex{color:#7C8288}
+
+.temas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.temas figure{margin:0}
+.temas img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px;
+           filter:grayscale(1) brightness(.66) contrast(1.18)}
+.temas figcaption{font-family:var(--f-body);font-weight:700;font-size:14px;color:#fff;
+                  margin-top:14px}
+</style></head><body>
+
+<div class="panel dark" id="panel">
+  <div class="cab">
+    <div class="eyebrow">Sistema visual</div>
+    <h2 class="tt" style="color:#fff;margin-top:26px">Dos tipografías.<br>Cuatro materiales.</h2>
+    <div class="sub">Tomadas del sitio que ya existía. Los materiales se alternan
+      para que ningún posteo del feed se parezca al de al lado.</div>
+  </div>
+
+  <div class="tipo">
+    <div>
+      <div class="nombre">Fraunces — display</div>
+      <div class="muestra">Renueva</div>
+      <div class="uso">Serif con carácter. Todos los títulos y remates — nunca el cuerpo de texto.</div>
+    </div>
+    <div>
+      <div class="nombre">Plus Jakarta Sans — cuerpo</div>
+      <div class="muestra cuerpo">Sin adornos.</div>
+      <div class="uso">Bajadas, listas, etiquetas. Legible a cualquier tamaño, nunca compite con el título.</div>
+    </div>
+  </div>
+
+  <div class="mitad">
+    <div>
+      <h4>Paleta</h4>
+      <div class="colores">
+        <div><div class="swatch" style="background:#0B0C0E"></div><div class="swatch-name">Tinta</div><div class="swatch-hex">#0B0C0E</div></div>
+        <div><div class="swatch" style="background:#FF6A00"></div><div class="swatch-name">Naranja</div><div class="swatch-hex">#FF6A00</div></div>
+        <div><div class="swatch" style="background:#F5F3EE;border:1px solid #333"></div><div class="swatch-name">Papel</div><div class="swatch-hex">#F5F3EE</div></div>
+        <div><div class="swatch" style="background:#FFFFFF;border:1px solid #333"></div><div class="swatch-name">Blanco</div><div class="swatch-hex">#FFFFFF</div></div>
+      </div>
+    </div>
+    <div>
+      <h4>Fotografía — tres temas, nunca otro</h4>
+      <div class="temas">
+        <figure><img src="../fotos_hi/px-8092431.jpg" style="object-position:50% 40%"><figcaption>Oficina</figcaption></figure>
+        <figure><img src="../fotos_hi/px-32716845.jpg" style="object-position:50% 40%"><figcaption>Obra</figcaption></figure>
+        <figure><img src="../fotos_hi/px-37172472.jpg" style="object-position:50% 45%"><figcaption>Ciudad</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie">
+    <span class="firma">Renueva Smart — Sistema de contenido</span>
+    <span class="num">03 / 08</span>
+  </div>
+</div>
+
+</body></html>
